@@ -7,6 +7,7 @@
  * **Total Time:** ~20:20
  * **Total Distance**: 16.2mi
  * **Total Elevation Gain**: 5,540ft
+ * [Strava](https://www.strava.com/activities/19107078221)
  * [**GPX**](./Temple_Crag_Moon_Goddess_Arete.gpx)
 ## 1. The Approach & Strategy
 We pulled out of the trailhead at **3:20 AM** to maximize daylight. At the Third Lake, the creek crossing was running high from late June snowmelt. It was doable, but looking at it, we knew we absolutely did not want to reverse it in the dark while exhausted on the hike out. We opted to commit to a different return path.
