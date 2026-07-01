@@ -1077,8 +1077,8 @@ body {
   stroke-linejoin: round;
   vertical-align: -0.1em;
   margin-right: 0.05em;
-  color: var(--accent-color);
-  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
+  color: inherit;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
 }
 
 .inline-beta-logo path {
