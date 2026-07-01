@@ -216,32 +216,32 @@ function run() {
   // Format table output
   const colWidths = {
     date: 12,
-    id: 13,
+    link: 43,
     type: 10,
     dist: 10,
-    time: 10,
-    name: 35
+    time: 10
   };
 
   // Print Header
   console.log(
     'Date'.padEnd(colWidths.date) + ' | ' +
-    'Activity ID'.padEnd(colWidths.id) + ' | ' +
+    'Strava Link'.padEnd(colWidths.link) + ' | ' +
     'Type'.padEnd(colWidths.type) + ' | ' +
     'Distance'.padEnd(colWidths.dist) + ' | ' +
     'Duration'.padEnd(colWidths.time) + ' | ' +
     'Activity Name'
   );
-  console.log('-'.repeat(colWidths.date + colWidths.id + colWidths.type + colWidths.dist + colWidths.time + colWidths.name + 15));
+  console.log('-'.repeat(colWidths.date + colWidths.link + colWidths.type + colWidths.dist + colWidths.time + 50));
 
   results.forEach(r => {
     const formattedDist = r.dist ? `${parseFloat(r.dist).toFixed(2)} mi` : '—';
     const formattedDuration = formatDuration(r.time);
     const shortName = r.name.length > 50 ? r.name.substring(0, 47) + '...' : r.name;
+    const stravaLink = r.id ? `https://www.strava.com/activities/${r.id}` : '—';
     
     console.log(
       r.dateFormatted.padEnd(colWidths.date) + ' | ' +
-      r.id.padEnd(colWidths.id) + ' | ' +
+      stravaLink.padEnd(colWidths.link) + ' | ' +
       r.type.substring(0, colWidths.type).padEnd(colWidths.type) + ' | ' +
       formattedDist.padEnd(colWidths.dist) + ' | ' +
       formattedDuration.padEnd(colWidths.time) + ' | ' +
