@@ -13,23 +13,24 @@
 ## 1. The Approach & Waiting at the Base
 <img src="./photo_1.jpg" align="right" alt="Clyde Minaret rising above the alpine lakes" width="400">
 
-We set off from the parking lot at around **4:15 AM** under a dark sky, aiming to beat the heat and give ourselves a wide safety margin. The approach began mellow and fast along well-defined trails, but as we drew closer to the Minarets, the path deteriorated. The final segment of the approach was particularly confusing, with no clear trail through the talus and scree, requiring careful navigation. Overall, the approach took us about **5 hours**.
+We set off from the parking lot at around **4:15 AM** under a dark sky, aiming to give ourselves a wide safety margin even though we were pretty sure we'll be able to move really fast on the route given the moderate grade. The approach began mellow and fast along mostly well-defined trails (though it was confusing around the creek crossing), but as we drew closer to the Minarets, the path deteriorated. The final segment of the approach was particularly confusing, with no clear trail through the talus, vegetation, scree and cliffs around Cecile lake, requiring careful navigation. Overall, the approach took us about **5 hours**.
 
 When we arrived at the base of the Southeast Face, we immediately spotted several other parties already on the route. While this made finding the start of the climb extremely straightforward, it also meant we had to queue. We ended up waiting at the base for at least an hour—possibly more—finally tying in and starting up the rock around **10:30 AM**.
 
 ## 2. Climbing, Dihedrals & Routefinding
-<img src="./photo_3.jpg" align="left" alt="Stiff climbing on the Southeast Face" width="320">
 
+<img src="./photo_2.jpg" align="right" alt="Direct start" width="320" style="page-break-after: always;">
+
+<div style="page-break-after: always;">
 The route began with the Direct Start, which delivered clean, enjoyable climbing. However, routefinding became noticeably trickier after Pitch 3, where the route traverses left. We struggled to locate the correct line initially, and even though there were other parties on the wall, they were hidden from view by the convoluted buttresses. 
 
 Some of the dihedral pitches felt stiff and hard for the grade, requiring sustained effort. Once we cleared the dihedrals and established ourselves on the upper face, we caught up to a slower party moving ahead of us. Eager to make up time before sunset, we decided to pass them, merging pitches and simul-climbing right past them. The transition was fast, but it came at the cost of terrible rope drag as we pushed upward.
-
-<img src="./photo_5.jpg" align="right" alt="Nearing the upper ridge" width="320">
+</div>
 
 ## 3. Summit & Exposed Raps
 We topped out and summited Clyde Minaret around **6:30 PM**. The views across the Ansel Adams Wilderness were spectacular, but we couldn't linger. Knowing that the descent would be complex and dangerous in the dark, we hurried our transition and immediately began navigating the descent route.
 
-Finding the rappel stations proved to be quite tricky. The route down the ridge is highly exposed, and route-finding requires making correct decisions at multiple exposed notches. Had we been forced to search for these anchors in the dark, it would have been significantly more difficult and hazardous. We managed to clear the rappels and retrieve our gear just as daylight faded.
+Finding the rappel stations proved to be quite tricky. The route down the ridge is highly exposed, and route-finding requires making correct decisions. Had we been forced to search for these anchors in the dark, it would have been significantly more difficult and hazardous. We managed to clear the rappels and get to the descent gully just as daylight faded. It also took us some time to find our stashed packs in the dark (we didn't leave them at the base of the route since it's a bit of a detour).
 
 ## 4. Lost in the Dark (The Cecile Lake Mistake)
 <img src="./photo_8.jpg" alt="Darkness settling over the Minaret lakes" width="450" align="right">
