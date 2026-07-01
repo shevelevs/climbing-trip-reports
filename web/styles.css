@@ -553,6 +553,10 @@ body {
   transition: transform var(--transition-normal);
 }
 
+.markdown-body .markdown-only {
+  display: none !important;
+}
+
 /* Handle markdown floats specifically */
 .markdown-body img[align="right"] {
   float: right;

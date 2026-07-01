@@ -10,7 +10,7 @@
  * [Strava](https://www.strava.com/activities/19107078221)
  * [**GPX**](./Temple_Crag_Moon_Goddess_Arete.gpx)
 ## 1. The Approach & Strategy
-<img src="./strava-splits.png" align="right" alt="Strava map and split times" width="550">
+<img src="./strava-splits.png" class="markdown-only" align="right" alt="Strava map and split times" width="550">
 
 We pulled out of the trailhead at **3:20 AM** to maximize daylight. At the Third Lake, the creek crossing was running high from late June snowmelt. It was doable, but looking at it, we knew we absolutely did not want to reverse it in the dark while exhausted on the hike out. We opted to commit to a different return path.
 We made good time on the approach, reaching the base of the arête at around 8am (making the hike in time of ~**4:40**). We didn't have crampons, but microspikes were enough for the snowfield on th approach. We had one ice axe, but didn't use it.
