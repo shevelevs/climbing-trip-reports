@@ -1,6 +1,8 @@
 // Global Application State
 let tripsData = [];
+let climbersData = [];
 let activeTripId = null;
+let activeClimberId = null;
 let mapInstance = null;
 let hoverMarker = null;
 
@@ -9,10 +11,15 @@ const globalStats = document.getElementById('global-stats');
 const searchInput = document.getElementById('search-input');
 const yearFiltersContainer = document.getElementById('year-filters-container');
 const tripsListContainer = document.getElementById('trips-list-container');
+const climbersListContainer = document.getElementById('climbers-list-container');
 const viewerContainer = document.getElementById('viewer-container');
 const emptyState = document.getElementById('empty-state');
 const detailView = document.getElementById('detail-view');
+const climberView = document.getElementById('climber-view');
 const backButton = document.getElementById('back-button');
+const climberBackButton = document.getElementById('climber-back-button');
+const tabTrips = document.getElementById('tab-trips');
+const tabClimbers = document.getElementById('tab-climbers');
 const appContainer = document.querySelector('.app-container');
 
 // Lightbox Modal Setup
@@ -56,6 +63,7 @@ function openLightbox(src, alt) {
 document.addEventListener('DOMContentLoaded', async () => {
   initLightbox();
   await loadTrips();
+  await loadClimbers();
   setupEventListeners();
   handleRoute();
 });
@@ -73,6 +81,19 @@ async function loadTrips() {
   } catch (err) {
     console.error('Error initialization:', err);
     tripsListContainer.innerHTML = `<div class="loading-state">Error loading trip reports. Please ensure build has been run.</div>`;
+  }
+}
+
+// Load the climbers list JSON
+async function loadClimbers() {
+  try {
+    const res = await fetch('climbers.json');
+    if (!res.ok) throw new Error('Failed to load climbers.json');
+    climbersData = await res.json();
+    renderClimbersList();
+  } catch (err) {
+    console.error('Error loading climbers:', err);
+    climbersListContainer.innerHTML = `<div class="loading-state">Error loading climbers list.</div>`;
   }
 }
 
@@ -184,6 +205,107 @@ function renderTripsList() {
   });
 }
 
+// Render the sidebar climber cards list
+function renderClimbersList() {
+  if (climbersData.length === 0) {
+    climbersListContainer.innerHTML = `<div class="loading-state">No climbers available.</div>`;
+    return;
+  }
+
+  climbersListContainer.innerHTML = climbersData.map(c => {
+    const count = tripsData.filter(t => {
+      if (!t.team) return false;
+      const names = t.team.split(/[\s&,]+/i).map(n => n.trim().toLowerCase());
+      return names.includes(c.id) || names.includes(c.name.toLowerCase());
+    }).length;
+
+    return `
+      <div class="trip-card climber-card ${c.id === activeClimberId ? 'active' : ''}" data-id="${c.id}">
+        <div class="trip-card-header">
+          <h4 class="trip-card-title">${c.name}</h4>
+          <span class="trip-card-year" style="font-size: 0.8rem; background: var(--border-color); color: var(--text-primary); padding: 0.15rem 0.4rem; border-radius: 4px;">
+            ${count} ${count === 1 ? 'trip' : 'trips'}
+          </span>
+        </div>
+        <div class="trip-card-route" style="margin-top: 0.25rem; font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+          ${c.bio}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Add click listeners to climber cards
+  climbersListContainer.querySelectorAll('.climber-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const climberId = card.dataset.id;
+      window.location.hash = `#/climber/${climberId}`;
+    });
+  });
+}
+
+// Load and render details for a selected climber
+function loadClimberProfile(climberId) {
+  const climber = climbersData.find(c => c.id === climberId);
+  if (!climber) {
+    window.location.hash = '#/climbers';
+    return;
+  }
+
+  // Hide other views and show climber view
+  emptyState.classList.add('hidden');
+  detailView.classList.add('hidden');
+  climberView.classList.remove('hidden');
+
+  // Set climber details
+  document.getElementById('climber-name').textContent = climber.name;
+  document.getElementById('climber-bio').textContent = climber.bio;
+
+  // Render trips this climber participated in
+  const climberTrips = tripsData.filter(t => {
+    if (!t.team) return false;
+    const names = t.team.split(/[\s&,]+/i).map(n => n.trim().toLowerCase());
+    return names.includes(climberId) || names.includes(climber.name.toLowerCase());
+  });
+
+  const climberTripsContainer = document.getElementById('climber-trips-container');
+  if (climberTrips.length === 0) {
+    climberTripsContainer.innerHTML = `<div class="loading-state">No trips recorded for this climber.</div>`;
+    return;
+  }
+
+  climberTripsContainer.innerHTML = climberTrips.map(t => `
+    <div class="trip-card" data-id="${t.id}" style="cursor: pointer; max-width: 100%; box-sizing: border-box;">
+      <div class="trip-card-header">
+        <h4 class="trip-card-title">${t.title}</h4>
+        <span class="trip-card-year">${t.year}</span>
+      </div>
+      <div class="trip-card-route">${t.route || 'Unknown Route'}</div>
+      <div class="trip-card-stats">
+        <div class="trip-card-stat-item">
+          <span>📅</span>
+          <span>${t.date.split(',')[0]}</span>
+        </div>
+        <div class="trip-card-stat-item">
+          <span>🏃</span>
+          <span>${t.distance || '—'}</span>
+        </div>
+        <div class="trip-card-stat-item">
+          <span>🏔️</span>
+          <span>${t.elevation || '—'}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Add click listeners to trip cards inside climber profile to navigate back to trip details
+  climberTripsContainer.querySelectorAll('.trip-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const tripId = card.dataset.id;
+      window.location.hash = `#/trip/${tripId}`;
+    });
+  });
+}
+
 // Setup global event listeners
 function setupEventListeners() {
   searchInput.addEventListener('input', () => {
@@ -194,6 +316,10 @@ function setupEventListeners() {
     window.location.hash = '#/';
   });
 
+  climberBackButton.addEventListener('click', () => {
+    window.location.hash = '#/climbers';
+  });
+
   window.addEventListener('hashchange', handleRoute);
 }
 
@@ -201,27 +327,93 @@ function setupEventListeners() {
 async function handleRoute() {
   const hash = window.location.hash;
   
+  // 1. Setup tab active states and sidebar visibility
+  if (hash.startsWith('#/climbers') || hash.startsWith('#/climber/')) {
+    tabTrips.classList.remove('active');
+    tabClimbers.classList.add('active');
+    
+    document.querySelector('.search-filter-box').classList.add('hidden');
+    tripsListContainer.classList.add('hidden');
+    climbersListContainer.classList.remove('hidden');
+    renderClimbersList();
+  } else {
+    tabTrips.classList.add('active');
+    tabClimbers.classList.remove('active');
+    
+    document.querySelector('.search-filter-box').classList.remove('hidden');
+    tripsListContainer.classList.remove('hidden');
+    climbersListContainer.classList.add('hidden');
+  }
+
+  // 2. Handle main viewer routing
   if (hash.startsWith('#/trip/')) {
     const tripId = hash.replace('#/trip/', '');
     activeTripId = tripId;
+    activeClimberId = null;
     appContainer.classList.add('show-detail');
+    
+    climberView.classList.add('hidden');
     await loadTripDetails(tripId);
-  } else {
+  } else if (hash.startsWith('#/climber/')) {
+    const climberId = hash.replace('#/climber/', '');
+    activeClimberId = climberId;
     activeTripId = null;
+    appContainer.classList.add('show-detail');
+    
+    if (mapInstance) {
+      mapInstance.remove();
+      mapInstance = null;
+    }
+    
+    loadClimberProfile(climberId);
+  } else if (hash === '#/climbers') {
+    activeTripId = null;
+    activeClimberId = null;
     appContainer.classList.remove('show-detail');
+    
     emptyState.classList.remove('hidden');
     detailView.classList.add('hidden');
+    climberView.classList.add('hidden');
     
-    // Clear Map if it exists
+    // Update empty state text for climbers
+    emptyState.querySelector('h2').textContent = 'Explore Our Climbers';
+    emptyState.querySelector('p').textContent = 'Select a climber from the sidebar to view their biography and climbing accomplishments.';
+    
+    if (mapInstance) {
+      mapInstance.remove();
+      mapInstance = null;
+    }
+  } else {
+    // Default dashboard
+    activeTripId = null;
+    activeClimberId = null;
+    appContainer.classList.remove('show-detail');
+    
+    emptyState.classList.remove('hidden');
+    detailView.classList.add('hidden');
+    climberView.classList.add('hidden');
+    
+    // Reset empty state text
+    emptyState.querySelector('h2').textContent = 'Explore Climbing Adventures';
+    emptyState.querySelector('p').textContent = 'Select a trip report from the sidebar to view full logs, route maps, elevation profiles, and climbing statistics.';
+    
     if (mapInstance) {
       mapInstance.remove();
       mapInstance = null;
     }
   }
   
-  // Update active state in sidebar list
+  // 3. Update active states on sidebar cards
   tripsListContainer.querySelectorAll('.trip-card').forEach(card => {
     if (card.dataset.id === activeTripId) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  climbersListContainer.querySelectorAll('.climber-card').forEach(card => {
+    if (card.dataset.id === activeClimberId) {
       card.classList.add('active');
     } else {
       card.classList.remove('active');
@@ -245,7 +437,21 @@ async function loadTripDetails(tripId) {
   document.getElementById('trip-title').textContent = trip.title;
   document.getElementById('meta-date').textContent = trip.date || '—';
   document.getElementById('meta-route').textContent = trip.route || '—';
-  document.getElementById('meta-team').textContent = trip.team || '—';
+  const metaTeam = document.getElementById('meta-team');
+  if (trip.team) {
+    const names = trip.team.split(/[\s&,]+/i).map(n => n.trim()).filter(n => n.length > 0 && n.toLowerCase() !== 'and');
+    metaTeam.innerHTML = '';
+    const teamLinks = names.map(name => {
+      const match = climbersData.find(c => c.name.toLowerCase() === name.toLowerCase() || c.id === name.toLowerCase());
+      if (match) {
+        return `<a href="#/climber/${match.id}" class="climber-link">${name}</a>`;
+      }
+      return name;
+    });
+    metaTeam.innerHTML = teamLinks.join(' & ');
+  } else {
+    metaTeam.textContent = '—';
+  }
   document.getElementById('meta-style').textContent = trip.style || '—';
 
   document.getElementById('stat-distance').textContent = trip.distance || '—';

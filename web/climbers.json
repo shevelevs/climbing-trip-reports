@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sergey",
+    "name": "Sergey",
+    "bio": "Sergey is a passionate mountaineer and traditional rock climber based in California. He spends his weekends exploring the high alpine peaks of the Sierra Nevada, from technical multi-pitch routes on granite domes to grueling car-to-car wilderness endurance pushes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": "rulik",
+    "name": "Rulik",
+    "bio": "Rulik is a seasoned climber with a love for steep granite arêtes and high-exposure lines. Often found partnering with Sergey on classic Sierra climbs, Rulik brings a wealth of alpine experience, strong lead climbing skills, and a positive attitude to long mountain objectives. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": "vova",
+    "name": "Vova",
+    "bio": "Vova is an alpine adventurer who thrives on rugged Sierra approaches and complex routefinding. Known for tackling demanding climbs like the Southeast Face of Clyde Minaret, Vova is always ready for long, challenging days in the backcountry. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": "aliona",
+    "name": "Aliona",
+    "bio": "Aliona is a rock climber and backpacker with a passion for high-altitude Sierra summits. Whether hauling heavy packs to base camp at Iceberg Lake or climbing classic lines like the East Buttress of Mt Whitney, Aliona enjoys the challenge and beauty of the high country. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]

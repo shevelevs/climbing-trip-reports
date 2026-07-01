@@ -88,6 +88,33 @@ body {
   color: var(--text-primary);
 }
 
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2.5rem;
+  margin-right: auto;
+  align-items: center;
+}
+
+.nav-tab {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+}
+
+.nav-tab.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
 .logo-img {
   width: 64px;
   height: 64px;
@@ -458,6 +485,19 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.climber-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed transparent;
+  transition: all var(--transition-fast);
+}
+
+.climber-link:hover {
+  border-bottom-color: var(--accent-color);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
 }
 
 .trip-stats-bar {
