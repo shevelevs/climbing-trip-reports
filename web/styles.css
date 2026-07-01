@@ -784,6 +784,16 @@ body {
   background-color: var(--border-color);
 }
 
+.btn-mp {
+  background-color: #2D3E50;
+  color: #ffffff;
+}
+
+.btn-mp:hover {
+  background-color: #3e556e;
+  box-shadow: 0 0 12px rgba(62, 85, 110, 0.4);
+}
+
 /* Leaflet map marker style override */
 .leaflet-div-icon-marker {
   background-color: var(--accent-color);

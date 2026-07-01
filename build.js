@@ -300,11 +300,15 @@ function build() {
             fs.copyFileSync(path.join(folderPath, file), path.join(distClimberFolder, file));
           }
           
+          const mpMatch = mdContent.match(/\[(?:\*\*)?Mountain\s+Project(?:\*\*)?\]\(([^)]+)\)/i);
+          const mountainProject = mpMatch ? mpMatch[1].trim() : '';
+
           climbers.push({
             id: folder,
             name: name,
             bio: bio,
-            mdPath: `climbers/${folder}/${mdFile}`
+            mdPath: `climbers/${folder}/${mdFile}`,
+            mountainProject: mountainProject
           });
         }
       }

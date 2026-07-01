@@ -199,14 +199,24 @@
           </div>
 
           <div class="detail-container">
-            <div class="report-text-column" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <!-- Left Column: Bio & Trips -->
+            <div class="report-text-column">
               <div class="markdown-body">
                 <h3 style="color: var(--accent-color); margin-top: 0; font-size: 1.4rem;">Biography</h3>
-                <p id="climber-bio" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-color); margin-bottom: 2.5rem;">Biography text...</p>
+                <div id="climber-bio">Biography text...</div>
                 
-                <h3 style="color: var(--accent-color); font-size: 1.4rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">Trips Participated In</h3>
+                <h3 style="color: var(--accent-color); font-size: 1.4rem; border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2.5rem;">Trips Participated In</h3>
                 <div class="trips-list" id="climber-trips-container" style="max-height: none; overflow: visible; margin-top: 1rem;">
                   <!-- Dynamically populated trip cards -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Climber Links -->
+            <div class="report-interactive-column">
+              <div class="sticky-column-content">
+                <div class="links-card" id="climber-links-card">
+                  <!-- Mountain Project button rendered here -->
                 </div>
               </div>
             </div>

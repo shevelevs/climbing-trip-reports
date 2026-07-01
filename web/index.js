@@ -292,6 +292,29 @@ async function loadClimberProfile(climberId) {
     bioContainer.innerHTML = `<div class="loading-state">Failed to load biography.</div>`;
   }
 
+  // Render Mountain Project and other climber links in right column links card
+  const linksCard = document.getElementById('climber-links-card');
+  linksCard.innerHTML = '';
+  if (climber.mountainProject) {
+    linksCard.classList.remove('hidden');
+    const a = document.createElement('a');
+    a.href = climber.mountainProject;
+    a.target = '_blank';
+    a.className = 'btn-link btn-mp';
+    a.innerHTML = `
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      </svg>
+      <span>Mountain Project Profile</span>
+    `;
+    linksCard.appendChild(a);
+  } else {
+    linksCard.classList.add('hidden');
+  }
+
   // Render trips this climber participated in
   const climberTrips = tripsData.filter(t => {
     if (!t.team) return false;
