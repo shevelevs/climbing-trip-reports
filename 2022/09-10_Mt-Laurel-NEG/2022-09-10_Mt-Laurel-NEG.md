@@ -13,27 +13,27 @@
 
 ---
 
-## 1. The Approach from Convict Lake
-<img src="./photo_1.jpg" align="right" alt="Mt Laurel rising above Convict Lake" width="400">
+## 1. The Approach & Dry Metamorphic Rock
+<img src="./photo_1.jpg" align="right" alt="Mt Laurel NE Gully Route Overlay" width="400">
 
 We started our morning at the Convict Lake trailhead under crisp, clear September Sierra skies. Mt Laurel (11,812') and its neighbor Mt Morrison tower dramatically over the deep blue waters of Convict Lake, showing off their famous contorted metamorphic rock bands. 
 
-The approach leads us past the lake and up into Laurel Canyon. We followed the rugged 4WD road winding up the canyon alongside Laurel Creek. The air was cool, but as soon as the sun hit the canyon walls, the temperature started rising. The trail was mostly straightforward but grew progressively steeper and looser as we climbed higher into the drainage, eventually positioning us directly beneath the massive northeast face of Mt Laurel.
+The approach leads us past the lake and up into Laurel Canyon. We followed the rugged 4WD road winding up the canyon alongside Laurel Creek. The approach went smoothly and the route was completely dry, with no lingering snow or ice in the gully. The path was straightforward and brought us directly beneath the massive northeast face of Mt Laurel.
 
 ---
 
 ## 2. Scrambling the NE Gully
-<img src="./photo_2.jpg" align="right" alt="Scrambling up the steep NE gully" width="320">
+<img src="./photo_3.jpg" align="right" alt="Looking up the steep NE Gully steps" width="320">
 
 Leaving the road behind, we entered the mouth of the NE Gully. The route is a classic Sierra scramble, characterized by a massive scree and talus gully that cuts directly up the mountain. 
 
-The scrambling began on loose, sliding rock where every two steps forward felt like one step back. However, by seeking out solid ribs of rock along the margins of the gully, we found excellent, stable scrambling on third-class rock steps. The routefinding was simple—just keep heading up—but we had to remain vigilant about loose rock, especially when climbing close to each other. The gully narrowed as it got steeper, surrounded by striking red, orange, and grey metamorphic rock bands that made for a spectacular backdrop.
+Contrary to some chossy reports, the rock felt remarkably solid for most of the climb. It was only as we got much closer to the summit ridge that the rock became looser and felt a little less solid. The start of the gully offered the hardest section of technical scrambling, but even then, it wasn't particularly difficult. We made quick, enjoyable progress climbing up the clean rock steps.
 
 ---
 
-## 3. Summit Ridge & Breathtaking Views
-<img src="./photo_3.jpg" align="right" alt="Sergey and Rulik at the summit of Mt Laurel" width="380">
+## 3. Summit Ridge & Sandy Descent
+<img src="./photo_13.jpg" align="right" alt="Approach shoe filled to the brim with sand" width="300">
 
-After a final, grinding push up the top of the couloir, we topped out onto the summit ridge. From the notch, the final stretch to the summit was a pleasant, wind-blown walk along the wide ridge.
+After topping out of the gully onto the summit ridge, we enjoyed the final ridge walk to the summit of Mt Laurel. The view from the top register was spectacular, looking directly down Convict Lake.
 
-We reached the summit of Mt Laurel (11,812 ft) exactly 3.5 hours after setting out. The summit offers a spectacular, bird's-eye view looking directly down onto Convict Lake, with Crowley Lake and the vast Owens Valley stretching out to the east. After enjoying a quick lunch, signing the register, and snapping photos of the dramatic ridges, we began our descent. We plunged down the soft scree slopes on the west side of the ridge, linking back up with the Laurel Canyon road and completing the 10.9-mile loop back to the lake in exactly 6 hours.
+However, the real adventure of the day began on the descent. While the approach was pleasant, the descent was extremely sandy and somewhat bushwacky. Plunging down the steep, soft slopes felt like scree surfing, resulting in an incredible amount of sand finding its way into our gear. By the time we got back down, our approach shoes were completely filled to the brim with sand and small pebbles! After shaking out our shoes and navigating some thick trailside brush, we completed the 10.9-mile loop back to Convict Lake in exactly 6 hours.
