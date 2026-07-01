@@ -220,15 +220,24 @@ function renderClimbersList() {
     }).length;
 
     return `
-      <div class="trip-card climber-card ${c.id === activeClimberId ? 'active' : ''}" data-id="${c.id}">
-        <div class="trip-card-header">
-          <h4 class="trip-card-title">${c.name}</h4>
-          <span class="trip-card-year" style="font-size: 0.8rem; background: var(--border-color); color: var(--text-primary); padding: 0.15rem 0.4rem; border-radius: 4px;">
-            ${count} ${count === 1 ? 'trip' : 'trips'}
-          </span>
-        </div>
-        <div class="trip-card-route" style="margin-top: 0.25rem; font-size: 0.8rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-          ${c.bio}
+      <div class="trip-card climber-card ${c.id === activeClimberId ? 'active' : ''}" data-id="${c.id}" style="padding: 0.65rem 0.85rem;">
+        <div style="display: flex; gap: 0.75rem; align-items: center; width: 100%;">
+          ${c.photo ? `
+            <img src="${c.photo}" class="climber-avatar-sm" alt="${c.name}">
+          ` : `
+            <div class="climber-avatar-sm-placeholder">${c.name[0]}</div>
+          `}
+          <div style="flex: 1; min-width: 0;">
+            <div class="trip-card-header" style="padding: 0; border: none; background: none; margin-bottom: 0.15rem; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <h4 class="trip-card-title" style="margin: 0; font-size: 0.9rem;">${c.name}</h4>
+              <span class="trip-card-year" style="font-size: 0.75rem; background: var(--border-color); color: var(--text-primary); padding: 0.1rem 0.35rem; border-radius: 4px; flex-shrink: 0; margin-left: 0.5rem;">
+                ${count} ${count === 1 ? 'trip' : 'trips'}
+              </span>
+            </div>
+            <div class="trip-card-route" style="margin-top: 0; font-size: 0.75rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;">
+              ${c.bio}
+            </div>
+          </div>
         </div>
       </div>
     `;
@@ -258,6 +267,13 @@ async function loadClimberProfile(climberId) {
 
   // Set climber details
   document.getElementById('climber-name').textContent = climber.name;
+  
+  const avatarContainer = document.getElementById('climber-avatar-container');
+  if (climber.photo) {
+    avatarContainer.innerHTML = `<img src="${climber.photo}" class="climber-avatar-lg" alt="${climber.name}">`;
+  } else {
+    avatarContainer.innerHTML = `<div class="climber-avatar-lg-placeholder">${climber.name[0]}</div>`;
+  }
   
   const bioContainer = document.getElementById('climber-bio');
   bioContainer.innerHTML = '<div class="loading-state">Loading biography...</div>';

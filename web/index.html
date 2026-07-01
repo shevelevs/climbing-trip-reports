@@ -188,14 +188,15 @@
         <!-- Climber View (Initially hidden) -->
         <div class="detail-view hidden" id="climber-view">
           <!-- Detail Header -->
-          <div class="detail-header">
-            <button class="back-button" id="climber-back-button" aria-label="Go back to list">
+          <div class="detail-header" style="display: flex; align-items: center; gap: 1rem;">
+            <button class="back-button" id="climber-back-button" aria-label="Go back to list" style="margin-right: 0.5rem;">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
               </svg>
               <span>Back to list</span>
             </button>
-            <h2 id="climber-name">Climber Name</h2>
+            <div id="climber-avatar-container" style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"></div>
+            <h2 id="climber-name" style="margin: 0;">Climber Name</h2>
           </div>
 
           <div class="detail-container">

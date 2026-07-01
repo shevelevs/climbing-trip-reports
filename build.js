@@ -302,13 +302,17 @@ function build() {
           
           const mpMatch = mdContent.match(/\[(?:\*\*)?Mountain\s+Project(?:\*\*)?\]\(([^)]+)\)/i);
           const mountainProject = mpMatch ? mpMatch[1].trim() : '';
+          
+          const photoFile = files.find(f => f.startsWith('image.') || f.startsWith('avatar.') || f.startsWith('profile.'));
+          const photo = photoFile ? `climbers/${folder}/${photoFile}` : '';
 
           climbers.push({
             id: folder,
             name: name,
             bio: bio,
             mdPath: `climbers/${folder}/${mdFile}`,
-            mountainProject: mountainProject
+            mountainProject: mountainProject,
+            photo: photo
           });
         }
       }
