@@ -1062,3 +1062,29 @@ body {
   font-size: 3rem;
   flex-shrink: 0;
 }
+
+/* Stylized Greek Beta Logo */
+.beta-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.inline-beta-logo {
+  display: inline-block;
+  height: 0.88em;
+  width: auto;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.1em;
+  margin-right: 0.05em;
+  color: inherit;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+}
+
+.inline-beta-logo path {
+  stroke-width: 3.6;
+}
+
+.inline-beta-logo path.ridge-line {
+  stroke-width: 2;
+}
