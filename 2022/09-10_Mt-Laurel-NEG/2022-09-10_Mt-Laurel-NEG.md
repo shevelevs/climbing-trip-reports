@@ -22,18 +22,20 @@ The approach leads past the lake and up into Laurel Canyon. I followed the rugge
 
 ---
 
-## 2. Scrambling the NE Gully
+## 2. Navigating the NE Gully Maze
 <img src="./photo_3.jpg" align="right" alt="Looking up the steep NE Gully steps" width="320">
 
-Leaving the road behind, I entered the mouth of the NE Gully. The route is a classic Sierra scramble, characterized by a massive scree and talus gully that cuts directly up the mountain. 
+Leaving the road behind, I entered the mouth of the NE Gully. Rather than a standard talus or scree chute, the climb felt like a vertical canyoneering expedition through a complex maze of metamorphic rock. 
 
-Contrary to some chossy reports, the rock felt remarkably solid for most of the climb. It was only as I got much closer to the summit ridge that the rock became looser and felt a little less solid. The start of the gully offered the hardest section of technical scrambling, but even then, it wasn't particularly difficult. I made quick, enjoyable progress climbing up the clean rock steps.
+The route gets technical right from the start, with the first few hundred yards presenting the hardest scrambling on the route—a series of short 5.2 bulges. Moving unroped in sticky rubber approach shoes, the climbing felt secure and not particularly difficult. 
+
+Higher up, the canyon opens into a geologic playground. The main path climbs a clean, pumice-like rock substrate that offers pleasant scrambling, flanked by a sea of decaying loose choss. I crossed the striking 80-foot-wide vein of red rock that sweeps across the gully, climbing gray slabs and passing through bands of red, white, and black rock. Staying left to avoid the false summits, the routefinding was a fun exercise in navigation. The rock remained clean and solid until the very top, where the substrate gave way to looser rock near the summit ridge.
 
 ---
 
 ## 3. Summit Ridge & Sandy Descent
 <img src="./photo_13.jpg" align="right" alt="Approach shoe filled to the brim with sand" width="300">
 
-After topping out of the gully onto the summit ridge, I enjoyed the final ridge walk to the summit of Mt Laurel. The view from the top register was spectacular, looking directly down Convict Lake.
+Topping out of the gully onto the summit ridge, I enjoyed the final ridge walk to the summit of Mt Laurel (11,812 ft). The reward was a breathtaking panoramic view of Mono Lake to the north and the contorted peaks of the Sierra.
 
-However, the real adventure of the day began on the descent. While the approach was pleasant, the descent was extremely sandy and somewhat bushwacky. Plunging down the steep, soft slopes felt like scree surfing, resulting in an incredible amount of sand finding its way into my gear. By the time I got back down, my approach shoes were completely filled to the brim with sand and small pebbles! After shaking out my shoes and navigating some thick trailside brush, I completed the 10.9-mile loop back to Convict Lake in exactly 6 hours.
+For the descent, I veered northward toward Convict Lake, enjoying a fast, "broken-field run" down the steep sandy slopes. Plunging down the scree felt like sand surfing, which made for a fast descent but left my approach shoes completely filled to the brim with sand and small pebbles! After shaking out my shoes and navigating some thick trailside brush, I completed the 10.9-mile solo loop in exactly 6 hours.
