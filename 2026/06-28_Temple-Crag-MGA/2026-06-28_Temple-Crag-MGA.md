@@ -17,6 +17,7 @@ We soloed the lower portion of the route reaching the first tower in about 1:20,
 >
 ## 2. The Climbing & Route-Finding Crux
 From the first tower onward, we pitched out the remainder of the route. A recent cold spell meant that whenever the route tracked onto the north side of the arête (climbers' right), we were plunged into the shade and freezing. It was chilly enough that I ended up climbing everything above the Ibrium Tower wearing my puffy jacket.
+<img src="./ibrium-tower-5.9-var.png" align="right" alt="Ibrium Tower 5.9 variation" width="300">
 Route-finding on the Ibrium Tower was the crux, which unfolded as follows:
 1. **The False Start:** We initially set out to look for the 5.9 variation but got off track by climbing sort of in the middle of the face, which sketchy and thin, but most importantly didn't seem to be leading anywhere toward the crack above. Proving we weren't the first ones to make this mistake, we found a bail anchor consisting of a carabiner and two nuts where a previous party had retreated. I used their gear to lower back down and reset.
 2. **The Bypass Attempt:** Next, we tried to locate the standard "3rd class" traverse around the tower to bypass the face altogether, but both of us eventually had to give up on finding it.
