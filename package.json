@@ -1,0 +1,12 @@
+{
+  "name": "climbing-trip-reports-web",
+  "version": "1.0.0",
+  "description": "Rich Web UI to browse climbing trip reports",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

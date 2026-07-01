@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Horizons | Climbing Trip Reports</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+        </svg>
+        <h1>Vertical Horizons</h1>
+      </div>
+      <div class="header-stats" id="global-stats">
+        <!-- Filled dynamically -->
+        <div class="stat-pill"><span class="stat-val">—</span> <span class="stat-lbl">trips</span></div>
+        <div class="stat-pill"><span class="stat-val">—</span> <span class="stat-lbl">miles</span></div>
+        <div class="stat-pill"><span class="stat-val">—</span> <span class="stat-lbl">vertical ft</span></div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <!-- Sidebar: List of trips -->
+      <section class="sidebar" aria-label="Trip Browser">
+        <div class="search-filter-box">
+          <div class="search-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search trips, routes, peaks..." aria-label="Search trips">
+          </div>
+          
+          <div class="year-filters-wrapper">
+            <label class="sr-only">Filter by Year</label>
+            <div class="year-filters" id="year-filters-container">
+              <!-- Dynamically populated year pills -->
+            </div>
+          </div>
+        </div>
+
+        <div class="trips-list" id="trips-list-container">
+          <!-- Dynamically populated trip cards -->
+          <div class="loading-state">Loading trip reports...</div>
+        </div>
+      </section>
+
+      <!-- Main Viewer Area -->
+      <section class="viewer" id="viewer-container" aria-label="Trip Details">
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state">
+          <div class="empty-illustration">
+            <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+              <circle cx="18" cy="8" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <h2>Explore Climbing Adventures</h2>
+          <p>Select a trip report from the sidebar to view full logs, route maps, elevation profiles, and climbing statistics.</p>
+        </div>
+
+        <!-- Detail View (Initially hidden) -->
+        <div class="detail-view hidden" id="detail-view">
+          <!-- Detail Header -->
+          <div class="detail-header">
+            <button class="back-button" id="back-button" aria-label="Go back to list">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+              </svg>
+              <span>Back to list</span>
+            </button>
+            <h2 id="trip-title">Trip Title</h2>
+            
+            <div class="trip-meta-grid">
+              <div class="meta-item">
+                <span class="meta-icon">📅</span>
+                <span class="meta-label">Date</span>
+                <span class="meta-value" id="meta-date">Date</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">🧗</span>
+                <span class="meta-label">Route</span>
+                <span class="meta-value" id="meta-route">Route</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">👥</span>
+                <span class="meta-label">Team</span>
+                <span class="meta-value" id="meta-team">Team</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">⚡</span>
+                <span class="meta-label">Style</span>
+                <span class="meta-value" id="meta-style">Style</span>
+              </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="trip-stats-bar">
+              <div class="trip-stat">
+                <span class="trip-stat-value" id="stat-distance">—</span>
+                <span class="trip-stat-label">Distance</span>
+              </div>
+              <div class="trip-stat">
+                <span class="trip-stat-value" id="stat-elevation">—</span>
+                <span class="trip-stat-label">Elevation Gain</span>
+              </div>
+              <div class="trip-stat">
+                <span class="trip-stat-value" id="stat-time">—</span>
+                <span class="trip-stat-label">Total Time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail Content Columns -->
+          <div class="detail-content-columns">
+            <!-- Left Column: Markdown Content -->
+            <div class="report-text-column">
+              <div class="markdown-body" id="markdown-content">
+                <!-- Renders here -->
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Map and Elevation Chart -->
+            <div class="report-interactive-column">
+              <div class="sticky-column-content">
+                <!-- Map Card -->
+                <div class="map-card">
+                  <div class="card-header">
+                    <h3>Route Map</h3>
+                    <div class="map-controls-desc">Interactive track from GPX</div>
+                  </div>
+                  <div id="map-container">
+                    <div id="map"></div>
+                  </div>
+                </div>
+
+                <!-- Elevation Profile Card -->
+                <div class="elevation-card" id="elevation-card">
+                  <div class="card-header">
+                    <h3>Elevation Profile</h3>
+                    <div class="elevation-stats">
+                      Max: <span id="ele-max">—</span>m | Min: <span id="ele-min">—</span>m
+                    </div>
+                  </div>
+                  <div class="canvas-wrapper">
+                    <canvas id="elevation-chart"></canvas>
+                    <div class="chart-tooltip" id="chart-tooltip"></div>
+                  </div>
+                  <div class="chart-instructions">Hover chart to trace route on map</div>
+                </div>
+
+                <!-- External Links Card -->
+                <div class="links-card">
+                  <a href="#" id="link-strava" target="_blank" class="btn-link btn-strava hidden">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L11.213 0 5.387 11.458h4.172"/>
+                    </svg>
+                    View on Strava
+                  </a>
+                  <a href="#" id="link-gpx" download class="btn-link btn-gpx">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Original GPX
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Marked Markdown Parser JS -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Main Application Logic -->
+  <script src="index.js"></script>
+</body>
+</html>
