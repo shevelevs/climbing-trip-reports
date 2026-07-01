@@ -14,19 +14,25 @@ Usage:
   node scripts/search_strava.js [options]
 
 Options:
-  --zip <path>       Path to the Strava export ZIP file.
-                     (Default: /Users/ssh/Downloads/export_1101878.zip)
-  --keyword <term>   Keyword to search for in name, type, or description (case-insensitive).
-  --date <date>      Filter by exact date (YYYY-MM-DD) or month/year prefix (e.g., YYYY-MM or YYYY).
-  --start <date>     Filter by start date (YYYY-MM-DD) for range search.
-  --end <date>       Filter by end date (YYYY-MM-DD) for range search.
-  --help, -h         Display this help message.
+  --zip <path>        Path to the Strava export ZIP file.
+                      (Default: /Users/ssh/Downloads/export_1101878.zip)
+  --keyword <term>    Keyword to search for in name, type, or description (case-insensitive).
+  --date <date>       Filter by exact date (YYYY-MM-DD) or month/year prefix (e.g., YYYY-MM or YYYY).
+  --start <date>      Filter by start date (YYYY-MM-DD) for range search.
+  --end <date>        Filter by end date (YYYY-MM-DD) for range search.
+  --duration <expr>   Filter by elapsed duration in hours using expressions:
+                        "3-5"   -> between 3 and 5 hours (inclusive)
+                        ">3"    -> more than 3 hours
+                        "<5"    -> less than 5 hours
+                        ">=3"   -> 3 or more hours
+                        "3"     -> 3 or more hours (alias for >=3)
+  --help, -h          Display this help message.
 
 Examples:
   node scripts/search_strava.js --keyword "Temple"
-  node scripts/search_strava.js --date "2026-06-28"
-  node scripts/search_strava.js --start "2026-06-01" --end "2026-06-30"
-  node scripts/search_strava.js --keyword "Hike" --start "2024-01-01"
+  node scripts/search_strava.js --duration "3-5"
+  node scripts/search_strava.js --duration ">3"
+  node scripts/search_strava.js --keyword "Hike" --duration ">=5"
 `);
 }
 
@@ -48,6 +54,79 @@ function parseCSVLine(line) {
   }
   result.push(current.trim());
   return result;
+}
+
+function parseDurationExpr(expr) {
+  if (!expr) return null;
+  expr = expr.trim();
+  
+  // 1. Range e.g. "3-5" or "3 - 5"
+  const rangeMatch = expr.match(/^([\d\.]+)\s*-\s*([\d\.]+)$/);
+  if (rangeMatch) {
+    return {
+      min: parseFloat(rangeMatch[1]),
+      max: parseFloat(rangeMatch[2]),
+      strictMin: false,
+      strictMax: false
+    };
+  }
+  
+  // 2. Greater than or equal ">=3" or "gte3"
+  const gteMatch = expr.match(/^(?:>=|gte)\s*([\d\.]+)$/i);
+  if (gteMatch) {
+    return {
+      min: parseFloat(gteMatch[1]),
+      max: null,
+      strictMin: false,
+      strictMax: false
+    };
+  }
+  
+  // 3. Less than or equal "<=5" or "lte5"
+  const lteMatch = expr.match(/^(?:<=|lte)\s*([\d\.]+)$/i);
+  if (lteMatch) {
+    return {
+      min: null,
+      max: parseFloat(lteMatch[1]),
+      strictMin: false,
+      strictMax: false
+    };
+  }
+  
+  // 4. Greater than ">3" or "gt3"
+  const gtMatch = expr.match(/^(?:>|gt)\s*([\d\.]+)$/i);
+  if (gtMatch) {
+    return {
+      min: parseFloat(gtMatch[1]),
+      max: null,
+      strictMin: true,
+      strictMax: false
+    };
+  }
+  
+  // 5. Less than "<5" or "lt5"
+  const ltMatch = expr.match(/^(?:<|lt)\s*([\d\.]+)$/i);
+  if (ltMatch) {
+    return {
+      min: null,
+      max: parseFloat(ltMatch[1]),
+      strictMin: false,
+      strictMax: true
+    };
+  }
+  
+  // 6. Plain number e.g. "3" -> treat as >= 3
+  const plainMatch = expr.match(/^([\d\.]+)$/);
+  if (plainMatch) {
+    return {
+      min: parseFloat(plainMatch[1]),
+      max: null,
+      strictMin: false,
+      strictMax: false
+    };
+  }
+  
+  return null;
 }
 
 function formatDate(date) {
@@ -78,6 +157,7 @@ function run() {
   let exactDate = '';
   let startDate = '';
   let endDate = '';
+  let durationRaw = '';
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -96,6 +176,9 @@ function run() {
     } else if (arg === '--end' && args[i + 1]) {
       endDate = args[i + 1];
       i++;
+    } else if (arg === '--duration' && args[i + 1]) {
+      durationRaw = args[i + 1];
+      i++;
     } else if (arg === '--help' || arg === '-h') {
       printHelp();
       process.exit(0);
@@ -109,6 +192,12 @@ function run() {
   // Verify zip exists
   if (!fs.existsSync(zipPath)) {
     console.error(`Error: Strava export zip file not found at: ${zipPath}`);
+    process.exit(1);
+  }
+
+  const durationFilter = parseDurationExpr(durationRaw);
+  if (durationRaw && !durationFilter) {
+    console.error(`Error: Invalid duration expression: "${durationRaw}". Use formats like "3-5", ">3", "<5", or "3".`);
     process.exit(1);
   }
 
@@ -151,7 +240,6 @@ function run() {
 
   for (let i = 1; i < lines.length; i++) {
     const row = parseCSVLine(lines[i]);
-    // Skip incomplete lines
     if (row.length < Math.max(...Object.values(col))) continue;
 
     const id = col.id !== -1 ? row[col.id] : '';
@@ -166,7 +254,6 @@ function run() {
     const actDate = new Date(dateStr);
     if (isNaN(actDate.getTime())) continue;
 
-    // Filters
     // 1. Keyword filter
     if (keyword) {
       const matchWord = keyword.toLowerCase();
@@ -178,11 +265,10 @@ function run() {
 
     // 2. Exact date / prefix filter
     if (exactDate) {
-      const dateString = formatDate(actDate); // YYYY-MM-DD
+      const dateString = formatDate(actDate);
       if (exactDate.length === 10) {
         if (dateString !== exactDate) continue;
       } else {
-        // Handle YYYY-MM or YYYY prefix matching
         if (!dateString.startsWith(exactDate)) continue;
       }
     }
@@ -190,6 +276,29 @@ function run() {
     // 3. Date range filter
     if (start && actDate < start) continue;
     if (end && actDate > end) continue;
+
+    // 4. Duration expression filter
+    if (durationFilter) {
+      const durationSeconds = parseInt(time, 10);
+      if (isNaN(durationSeconds)) continue;
+      const durationHours = durationSeconds / 3600;
+      
+      const { min, max, strictMin, strictMax } = durationFilter;
+      if (min !== null) {
+        if (strictMin) {
+          if (durationHours <= min) continue;
+        } else {
+          if (durationHours < min) continue;
+        }
+      }
+      if (max !== null) {
+        if (strictMax) {
+          if (durationHours >= max) continue;
+        } else {
+          if (durationHours > max) continue;
+        }
+      }
+    }
 
     results.push({
       id,
