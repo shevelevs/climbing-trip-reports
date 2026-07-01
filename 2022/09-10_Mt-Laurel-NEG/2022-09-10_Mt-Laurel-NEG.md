@@ -18,16 +18,14 @@
 
 I started my morning at the Convict Lake trailhead under crisp, clear September Sierra skies. Mt Laurel (11,812') and its neighbor Mt Morrison tower dramatically over the deep blue waters of Convict Lake, showing off their famous contorted metamorphic rock bands. 
 
-The approach leads past the lake and up into Laurel Canyon. I followed the rugged 4WD road winding up the canyon alongside Laurel Creek. The approach went smoothly and the route was completely dry, with no lingering snow or ice in the gully. The path was straightforward and brought me directly beneath the massive northeast face of Mt Laurel.
+The approach leads past the lake and up into Laurel Canyon. I followed the rugged 4WD road winding up the canyon alongside Laurel Creek. The approach went smoothly and the route was completely dry. The path was straightforward and brought me directly beneath the massive northeast face of Mt Laurel.
 
 ---
 
 ## 2. Navigating the NE Gully Maze
 <img src="./photo_3.jpg" align="right" alt="Looking up the steep NE Gully steps" width="320">
 
-Leaving the road behind, I entered the mouth of the NE Gully. Rather than a standard talus or scree chute, the climb felt like a vertical canyoneering expedition through a complex maze of metamorphic rock. 
-
-The route gets technical right from the start, with the first few hundred yards presenting the hardest scrambling on the route—a series of short 5.2 bulges. Moving unroped in sticky rubber approach shoes, the climbing felt secure and not particularly difficult. 
+The route gets technical right from the start, with the first few hundred yards presenting the hardest scrambling on the route—a series of short 5.2 bulges. The climbing in approach shoes felt secure and not particularly difficult. 
 
 Higher up, the canyon opens into a geologic playground. The main path climbs a clean, pumice-like rock substrate that offers pleasant scrambling, flanked by a sea of decaying loose choss. I crossed the striking 80-foot-wide vein of red rock that sweeps across the gully, climbing gray slabs and passing through bands of red, white, and black rock. 
 
