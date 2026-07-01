@@ -372,9 +372,9 @@ async function loadMapAndElevation(trip) {
     // Plot Route Polyline
     const latlngs = trackData.points.map(p => [p[0], p[1]]);
     const polyline = L.polyline(latlngs, {
-      color: '#b75e29', // Terracotta Rust Orange for high visibility track
+      color: '#51acf0', // Sky Blue for theme consistency
       weight: 4,
-      opacity: 0.85
+      opacity: 0.9
     }).addTo(mapInstance);
 
     mapInstance.fitBounds(trackData.bounds, { padding: [20, 20] });

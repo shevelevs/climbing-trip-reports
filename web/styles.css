@@ -726,12 +726,12 @@ body {
 }
 
 .btn-strava {
-  background-color: #fc6100;
-  color: white;
+  background-color: var(--accent-color);
+  color: #030a10;
 }
 
 .btn-strava:hover {
-  background-color: #e25600;
+  background-color: var(--accent-hover);
 }
 
 .btn-gpx {
