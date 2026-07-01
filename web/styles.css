@@ -88,6 +88,33 @@ body {
   color: var(--text-primary);
 }
 
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2.5rem;
+  margin-right: auto;
+  align-items: center;
+}
+
+.nav-tab {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+}
+
+.nav-tab.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
 .logo-img {
   width: 64px;
   height: 64px;
@@ -460,6 +487,19 @@ body {
   text-overflow: ellipsis;
 }
 
+.climber-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed transparent;
+  transition: all var(--transition-fast);
+}
+
+.climber-link:hover {
+  border-bottom-color: var(--accent-color);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
 .trip-stats-bar {
   display: flex;
   gap: 2rem;
@@ -538,6 +578,19 @@ body {
 
 .markdown-body strong {
   color: var(--text-primary);
+}
+
+.markdown-body a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.5px dashed transparent;
+  transition: all var(--transition-fast);
+}
+
+.markdown-body a:hover {
+  border-bottom-color: var(--accent-color);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.35);
 }
 
 .markdown-body blockquote {
@@ -721,6 +774,7 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
+  font-family: var(--font-sans);
   transition: all var(--transition-fast);
   cursor: pointer;
 }
@@ -742,6 +796,17 @@ body {
 
 .btn-gpx:hover {
   background-color: var(--border-color);
+}
+
+.btn-mp {
+  background-color: transparent;
+  border: 1.5px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-mp:hover {
+  background-color: rgba(0, 242, 254, 0.08);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.15);
 }
 
 /* Leaflet map marker style override */
@@ -946,4 +1011,54 @@ body {
   .header-stats {
     display: none;
   }
+}
+
+/* Climber Avatars */
+.climber-avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.climber-avatar-sm-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.climber-avatar-lg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.3);
+  flex-shrink: 0;
+}
+
+.climber-avatar-lg-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border: 3px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 3rem;
+  flex-shrink: 0;
 }

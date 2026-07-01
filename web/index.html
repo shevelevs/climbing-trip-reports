@@ -24,6 +24,10 @@
         <img src="climbing_logo.jpg" alt="Seeking Beta Logo" class="logo-img">
         <h1>Seeking Beta</h1>
       </div>
+      <nav class="header-nav">
+        <a href="#/" class="nav-tab active" id="tab-trips">Trips</a>
+        <a href="#/climbers" class="nav-tab" id="tab-climbers">Climbers</a>
+      </nav>
       <div class="header-stats" id="global-stats">
         <!-- Filled dynamically -->
         <div class="stat-pill"><span class="stat-val">—</span> <span class="stat-lbl">trips</span></div>
@@ -55,6 +59,10 @@
         <div class="trips-list" id="trips-list-container">
           <!-- Dynamically populated trip cards -->
           <div class="loading-state">Loading trip reports...</div>
+        </div>
+
+        <div class="trips-list climbers-list hidden" id="climbers-list-container">
+          <!-- Dynamically populated climber cards -->
         </div>
       </section>
 
@@ -171,6 +179,45 @@
                     </svg>
                     Download Original GPX
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Climber View (Initially hidden) -->
+        <div class="detail-view hidden" id="climber-view">
+          <!-- Detail Header -->
+          <div class="detail-header" style="display: flex; align-items: center; gap: 1rem;">
+            <button class="back-button" id="climber-back-button" aria-label="Go back to list" style="margin-right: 0.5rem;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+              </svg>
+              <span>Back to list</span>
+            </button>
+            <div id="climber-avatar-container" style="display: flex; align-items: center; justify-content: center; flex-shrink: 0;"></div>
+            <h2 id="climber-name" style="margin: 0;">Climber Name</h2>
+          </div>
+
+          <div class="detail-content-columns">
+            <!-- Left Column: Bio & Trips -->
+            <div class="report-text-column">
+              <div class="markdown-body">
+                <h3 style="color: var(--accent-color); margin-top: 0; font-size: 1.4rem;">Biography</h3>
+                <div id="climber-bio">Biography text...</div>
+                
+                <h3 style="color: var(--accent-color); font-size: 1.4rem; border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2.5rem;">Trips Participated In</h3>
+                <div class="trips-list" id="climber-trips-container" style="max-height: none; overflow: visible; margin-top: 1rem;">
+                  <!-- Dynamically populated trip cards -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Climber Links -->
+            <div class="report-interactive-column">
+              <div class="sticky-column-content">
+                <div class="links-card" id="climber-links-card">
+                  <!-- Mountain Project button rendered here -->
                 </div>
               </div>
             </div>

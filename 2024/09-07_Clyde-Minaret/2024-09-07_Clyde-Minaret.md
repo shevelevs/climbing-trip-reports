@@ -1,7 +1,7 @@
 # Trip Report: Clyde Minaret (Southeast Face, Direct Start)
 ### Summary
  * **Date:** September 7, 2024
- * **Team:** Sergey & Vova
+ * **Team:** Sergey & Vlad
  * **Route:** Southeast Face (Direct Start)
  * **Style:** Car-to-Car
  * **Total Time:** 21:51:27
