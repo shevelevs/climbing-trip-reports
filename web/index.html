@@ -71,9 +71,38 @@
         <!-- Empty State -->
         <div class="empty-state" id="empty-state">
           <div class="empty-illustration">
-            <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
-              <circle cx="18" cy="8" r="1" fill="currentColor"/>
+            <svg viewBox="0 0 100 100" width="160" height="160" class="climbing-logo-svg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="#51acf0" stop-opacity="0.02" />
+                </linearGradient>
+                <linearGradient id="mountain-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#51acf0" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#1e293b" stop-opacity="0.6" />
+                </linearGradient>
+                <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="46" fill="url(#bg-grad)" stroke="#51acf0" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="2 1" />
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.5" />
+              <circle cx="65" cy="35" r="15" fill="url(#sun-glow)" />
+              <circle cx="65" cy="35" r="6" fill="#00f2fe" opacity="0.85" />
+              <path d="M 15 75 L 35 45 L 55 75 Z" fill="#1e293b" opacity="0.5" />
+              <path d="M 50 75 L 68 50 L 85 75 Z" fill="#1e293b" opacity="0.7" />
+              <path d="M 25 75 L 50 30 L 75 75 Z" fill="url(#mountain-grad)" stroke="#232a3b" stroke-width="0.5" />
+              <path d="M 50 30 L 75 75 L 50 75 Z" fill="#1e293b" opacity="0.3" />
+              <path d="M 32 75 Q 38 65 42 58 T 50 30" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round" opacity="0.95" />
+              <g transform="translate(41, 56) scale(0.6)">
+                <circle cx="5" cy="2" r="1.5" fill="#00f2fe" />
+                <path d="M 5 3.5 L 5 8 L 3 12" stroke="#00f2fe" stroke-width="1.2" stroke-linecap="round" fill="none" />
+                <path d="M 5 4.5 L 1.5 3" stroke="#00f2fe" stroke-width="1.0" stroke-linecap="round" fill="none" />
+                <path d="M 5 4.5 L 8.5 2" stroke="#00f2fe" stroke-width="1.0" stroke-linecap="round" fill="none" />
+                <path d="M 5 8 L 1 10.5" stroke="#00f2fe" stroke-width="1.0" stroke-linecap="round" fill="none" />
+                <path d="M 3 12 L 5 14.5" stroke="#00f2fe" stroke-width="1.0" stroke-linecap="round" fill="none" />
+              </g>
             </svg>
           </div>
           <h2>Explore Climbing Adventures</h2>
