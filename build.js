@@ -258,6 +258,63 @@ function build() {
   fs.writeFileSync(path.join(distDir, 'trips.json'), JSON.stringify(trips, null, 2));
   console.log(`Found and built ${trips.length} trip report(s).`);
 
+  // 2.5. Process climbers from directory
+  const climbers = [];
+  const climbersSrcDir = path.join(__dirname, 'climbers');
+  const climbersDistDir = path.join(distDir, 'climbers');
+  
+  if (fs.existsSync(climbersSrcDir)) {
+    fs.mkdirSync(climbersDistDir, { recursive: true });
+    
+    const climberFolders = fs.readdirSync(climbersSrcDir);
+    for (const folder of climberFolders) {
+      const folderPath = path.join(climbersSrcDir, folder);
+      if (fs.statSync(folderPath).isDirectory()) {
+        const files = fs.readdirSync(folderPath);
+        const mdFile = files.find(f => f.endsWith('.md'));
+        if (mdFile) {
+          const mdPath = path.join(folderPath, mdFile);
+          const mdContent = fs.readFileSync(mdPath, 'utf8');
+          
+          // Parse name from first H1 header
+          const nameMatch = mdContent.match(/^#\s+([^\r\n]+)/m);
+          const name = nameMatch ? nameMatch[1].trim() : folder;
+          
+          // Parse first paragraph (non-header, non-image, non-empty line)
+          const lines = mdContent.split(/\r?\n/);
+          let bio = '';
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (trimmed && !trimmed.startsWith('#') && !trimmed.startsWith('<') && !trimmed.startsWith('!')) {
+              bio = trimmed;
+              break;
+            }
+          }
+          
+          // Create directory in dist
+          const distClimberFolder = path.join(climbersDistDir, folder);
+          fs.mkdirSync(distClimberFolder, { recursive: true });
+          
+          // Copy all files in the climber directory to dist
+          for (const file of files) {
+            fs.copyFileSync(path.join(folderPath, file), path.join(distClimberFolder, file));
+          }
+          
+          climbers.push({
+            id: folder,
+            name: name,
+            bio: bio,
+            mdPath: `climbers/${folder}/${mdFile}`
+          });
+        }
+      }
+    }
+  }
+  
+  // Write out the climbers JSON list
+  fs.writeFileSync(path.join(distDir, 'climbers.json'), JSON.stringify(climbers, null, 2));
+  console.log(`Found and built ${climbers.length} climber profile(s).`);
+
   // 3. Copy web assets to dist
   if (fs.existsSync(webDir)) {
     const webFiles = fs.readdirSync(webDir);

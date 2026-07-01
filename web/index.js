@@ -244,7 +244,7 @@ function renderClimbersList() {
 }
 
 // Load and render details for a selected climber
-function loadClimberProfile(climberId) {
+async function loadClimberProfile(climberId) {
   const climber = climbersData.find(c => c.id === climberId);
   if (!climber) {
     window.location.hash = '#/climbers';
@@ -258,7 +258,39 @@ function loadClimberProfile(climberId) {
 
   // Set climber details
   document.getElementById('climber-name').textContent = climber.name;
-  document.getElementById('climber-bio').textContent = climber.bio;
+  
+  const bioContainer = document.getElementById('climber-bio');
+  bioContainer.innerHTML = '<div class="loading-state">Loading biography...</div>';
+  
+  try {
+    const res = await fetch(climber.mdPath);
+    if (!res.ok) throw new Error('Biography file not found');
+    const mdText = await res.text();
+    
+    // Parse using marked.js
+    let htmlContent = marked.parse(mdText);
+    
+    // Remove the main H1 tag if it exists in the bio output
+    htmlContent = htmlContent.replace(/<h1[^>]*>.*?<\/h1>/i, '');
+    
+    bioContainer.innerHTML = htmlContent;
+    
+    // Resolve relative assets
+    const climberFolderUrl = `climbers/${climberId}`;
+    bioContainer.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src');
+      if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+        const cleanedSrc = src.startsWith('./') ? src.substring(2) : src;
+        img.src = `${climberFolderUrl}/${cleanedSrc}`;
+      }
+      img.addEventListener('click', () => {
+        openLightbox(img.src, img.alt);
+      });
+    });
+  } catch (err) {
+    console.error('Error loading biography:', err);
+    bioContainer.innerHTML = `<div class="loading-state">Failed to load biography.</div>`;
+  }
 
   // Render trips this climber participated in
   const climberTrips = tripsData.filter(t => {
@@ -365,7 +397,7 @@ async function handleRoute() {
       mapInstance = null;
     }
     
-    loadClimberProfile(climberId);
+    await loadClimberProfile(climberId);
   } else if (hash === '#/climbers') {
     activeTripId = null;
     activeClimberId = null;
