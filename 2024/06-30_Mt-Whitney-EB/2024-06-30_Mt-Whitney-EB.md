@@ -16,7 +16,7 @@
 ## 1. Day 1: The Hike-In & The "Bonus" Appendix
 <img src="./photo_2.jpg" align="right" alt="Hike in to Iceberg Lake" width="400">
 
-We set off on June 29 under a super-hot Sierra sun. Right out of the gate, we missed the crucial junction leading to the North Fork of Lone Pine Creek trail. This mistake added a 1-mile "bonus" appendix (0.5 miles each way) of unnecessary hiking. 
+We set off from the trailhead on June 29 at **12:55 PM** under a super-hot Sierra sun—starting this late in the day in that heat turned out to be a major mistake. Right out of the gate, we missed the crucial junction leading to the North Fork of Lone Pine Creek trail. This mistake added a 1-mile "bonus" appendix (0.5 miles each way) of unnecessary hiking. 
 
 Our packs were brutally heavy. Fearing unknown snow and ice conditions on the upper approach and descent, we had hauled extra gear—including crampons, heavy mountaineering boots, and ice axes. Luckily, during the hike in, we crossed paths with descending climbers who gave us updated beta on the route. Based on their reports, we decided to leave the heavy ice axes at our base camp at Iceberg Lake, opting to carry only crampons and boots on the climb itself.
 
