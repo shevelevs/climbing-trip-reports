@@ -82,10 +82,18 @@ body {
 
 .header-logo h1 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--text-primary);
+}
+
+.logo-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
 }
 
 .header-stats {
@@ -718,12 +726,12 @@ body {
 }
 
 .btn-strava {
-  background-color: #fc6100;
-  color: white;
+  background-color: var(--accent-color);
+  color: #030a10;
 }
 
 .btn-strava:hover {
-  background-color: #e25600;
+  background-color: var(--accent-hover);
 }
 
 .btn-gpx {
