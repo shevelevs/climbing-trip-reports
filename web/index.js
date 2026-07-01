@@ -570,8 +570,27 @@ async function loadTripDetails(tripId) {
   try {
     const res = await fetch(trip.mdPath);
     if (!res.ok) throw new Error('Markdown file not found');
-    let mdText = await res.ok ? await res.text() : '';
+    let mdText = res.ok ? await res.text() : '';
     
+    // Replace names in the Team line with climber profile markdown links
+    if (mdText) {
+      mdText = mdText.replace(/(\*\*(?:Team|Partners?):\*\*\s*)([^\r\n]+)/gi, (match, prefix, teamStr) => {
+        const names = teamStr.split(/([\s&,]+|and)/gi);
+        const linkedNames = names.map(token => {
+          const trimmed = token.trim();
+          if (!trimmed || trimmed.toLowerCase() === 'and' || trimmed === '&' || trimmed === ',') {
+            return token;
+          }
+          const matchClimber = climbersData.find(c => c.name.toLowerCase() === trimmed.toLowerCase() || c.id === trimmed.toLowerCase());
+          if (matchClimber) {
+            return `[${trimmed}](#/climber/${matchClimber.id})`;
+          }
+          return token;
+        });
+        return prefix + linkedNames.join('');
+      });
+    }
+
     // Parse using marked.js
     const htmlContent = marked.parse(mdText);
     markdownContainer.innerHTML = htmlContent;
