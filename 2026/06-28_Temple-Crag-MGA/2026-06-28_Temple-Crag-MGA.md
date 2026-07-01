@@ -10,9 +10,12 @@
  * [Strava](https://www.strava.com/activities/19107078221)
  * [**GPX**](./Temple_Crag_Moon_Goddess_Arete.gpx)
 ## 1. The Approach & Strategy
+<img src="./strava-splits.png" align="right" alt="Strava map and split times" width="550">
+
 We pulled out of the trailhead at **3:20 AM** to maximize daylight. At the Third Lake, the creek crossing was running high from late June snowmelt. It was doable, but looking at it, we knew we absolutely did not want to reverse it in the dark while exhausted on the hike out. We opted to commit to a different return path.
 We made good time on the approach, reaching the base of the arête at around 8am (making the hike in time of ~**4:40**). We didn't have crampons, but microspikes were enough for the snowfield on th approach. We had one ice axe, but didn't use it.
 We soloed the lower portion of the route reaching the first tower in about 1:20, where we roped up. Started climbing the traverse around the First tower at ~10:00am.
+
 > **Route Note:** For future parties wondering about the start, we navigated right into the 3rd-4th class climbing on the true arête without missing a beat. It feels fairly straightforward, but pay attention so you don't overshoot it, go too high, and risk getting sucked into the gully between Moon Goddess and Venusian Blind, not sure if it's easy to correct.
 >
 ## 2. The Climbing & Route-Finding Crux
@@ -25,6 +28,8 @@ Route-finding on the Ibrium Tower was the crux, which unfolded as follows:
 making this pitch somewhat exciting. It's also pretty sustained for the grade (or so it felt).
 Between searching, bailing, retrying and transitioning, we probably wasted full 2 hours or more on the tower, making it to the top only 3.5 hours after getting to its base. A few pitches higher, the short rappel also consumed some extra time, as it wasn't immediately obvious where to lower to bypass the large boulders blocking the notch. It becomes more obvious for the second. We were also concerned about rope snagging since it was a bunch of loose grippy stuff all around.
 ## 3. Top-Out & Descent
+<img src="./contact-pass-descent.png" align="right" alt="Getting closer to rap station" width="300">
+
 We finally topped out the route late in the evening at **6:20 PM**. With the sun dipping low, we made the decision to skip the true summit of Temple Crag and focus on getting established on the descent before darkness set in.
 We downclimbed to Contact Pass during the daylight, which didn't seem very difficult. In the dark it's most likely a different story. We found two separate rap station. Both looked like they would likely reach the ground, but we played it safe and opted for the set that gave us the highest visual certainty of making the deck (getting to it required a bit more downclimbing than the other one).
 The descent threw a few final hurdles at us:
