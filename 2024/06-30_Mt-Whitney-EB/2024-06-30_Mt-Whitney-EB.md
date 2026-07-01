@@ -7,7 +7,10 @@
  * **Total Time:** Day 1: 7:41, Day 2: 16:29
  * **Total Distance**: 16.5mi (Day 1: 7.22mi, Day 2: 9.3mi)
  * **Total Elevation Gain**: 6,875ft (Day 1: 4,990ft, Day 2: 1,885ft)
+ * [Strava (Hike-In)](https://www.strava.com/activities/11779871513)
+ * [Strava (Approach)](https://www.strava.com/activities/11779871625)
  * [Strava (Climb)](https://www.strava.com/activities/11779873812)
+ * [Strava (Descent)](https://www.strava.com/activities/11779876453)
  * [**GPX**](./Mt_Whitney_East_Buttress.gpx)
 
 ## 1. Day 1: The Hike-In & The "Bonus" Appendix

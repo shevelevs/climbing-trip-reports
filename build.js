@@ -144,10 +144,20 @@ function parseMetadata(markdownText) {
   const time = getMatch(/\*\*(?:Total Time|Time):\*\*\s*([^\r\n]+)/i);
   const distance = getMatch(/\*\*(?:Total Distance|Distance)\*\*[:\s]*([^\r\n]+)/i);
   const elevation = getMatch(/\*\*(?:Total Elevation Gain|Elevation Gain|Elevation)\*\*[:\s]*([^\r\n]+)/i);
-  const strava = getMatch(/\[(?:\*\*)?Strava(?:\*\*)?\]\(([^)]+)\)/i);
+  const stravaLinks = [];
+  const stravaRegex = /\[(?:\*\*)?Strava(?:\s*\(([^)]+)\))?(?:\*\*)?\]\(([^)]+)\)/gi;
+  let stravaMatch;
+  while ((stravaMatch = stravaRegex.exec(markdownText)) !== null) {
+    stravaLinks.push({
+      label: stravaMatch[1] ? stravaMatch[1].trim() : '',
+      url: stravaMatch[2].trim()
+    });
+  }
+  
+  const strava = stravaLinks.length > 0 ? stravaLinks[0].url : '';
   const gpx = getMatch(/\[(?:\*\*)?GPX(?:\*\*)?\]\(([^)]+)\)/i);
 
-  return { title, date, team, route, style, time, distance, elevation, strava, gpx };
+  return { title, date, team, route, style, time, distance, elevation, strava, stravaLinks, gpx };
 }
 
 function build() {
@@ -224,6 +234,7 @@ function build() {
         distance: meta.distance,
         elevation: meta.elevation,
         strava: meta.strava,
+        stravaLinks: meta.stravaLinks,
         gpxPath: `${year}/${folder}/${path.basename(meta.gpx || '')}`,
         mdPath: `${year}/${folder}/${mdFileName}`,
         hasTrack: hasTrack

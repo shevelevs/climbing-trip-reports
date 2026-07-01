@@ -253,12 +253,34 @@ async function loadTripDetails(tripId) {
   document.getElementById('stat-time').textContent = trip.time || '—';
 
   // Strava and GPX link setup
-  const stravaBtn = document.getElementById('link-strava');
-  if (trip.strava) {
-    stravaBtn.href = trip.strava;
-    stravaBtn.classList.remove('hidden');
-  } else {
-    stravaBtn.classList.add('hidden');
+  const stravaContainer = document.getElementById('strava-links-container');
+  stravaContainer.innerHTML = '';
+  if (trip.stravaLinks && trip.stravaLinks.length > 0) {
+    trip.stravaLinks.forEach(link => {
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.target = '_blank';
+      a.className = 'btn-link btn-strava';
+      a.innerHTML = `
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L11.213 0 5.387 11.458h4.172"/>
+        </svg>
+        <span>View on Strava ${link.label ? `(${link.label})` : ''}</span>
+      `;
+      stravaContainer.appendChild(a);
+    });
+  } else if (trip.strava) {
+    const a = document.createElement('a');
+    a.href = trip.strava;
+    a.target = '_blank';
+    a.className = 'btn-link btn-strava';
+    a.innerHTML = `
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+        <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L11.213 0 5.387 11.458h4.172"/>
+      </svg>
+      <span>View on Strava</span>
+    `;
+    stravaContainer.appendChild(a);
   }
 
   const gpxBtn = document.getElementById('link-gpx');
