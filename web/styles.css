@@ -1,14 +1,17 @@
 /* Design Tokens & Theme Variables */
 :root {
-  --bg-primary: #0a0c10;
-  --bg-secondary: #12161f;
-  --bg-tertiary: #1b202e;
-  --border-color: #232a3b;
-  --accent-color: #ff5e3a; /* Mountaineering Orange */
-  --accent-hover: #e04a27;
-  --text-primary: #f3f4f6;
-  --text-secondary: #a1a8b8;
-  --text-muted: #64748b;
+  --bg-primary: #030a10;     /* Deep Slate Navy Black */
+  --bg-secondary: #0a1724;   /* Slate Navy */
+  --bg-tertiary: #112336;    /* Medium Slate Navy */
+  --border-color: #1a324b;   /* Subtle Slate Steel Border */
+  --accent-color: #51acf0;   /* Tahoe Sky Blue */
+  --accent-hover: #3399eb;
+  --accent-color-rgb: 81, 172, 240;
+  --accent-rust: #b75e29;    /* Terracotta Rust Orange */
+  --accent-rust-rgb: 183, 94, 41;
+  --text-primary: #dedad1;   /* Rock Sand Beige */
+  --text-secondary: #a0acba;  /* Slate Gray */
+  --text-muted: #5e7287;
   
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -16,7 +19,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-  --glass-bg: rgba(18, 22, 31, 0.75);
+  --glass-bg: rgba(10, 23, 36, 0.75);
   --glass-blur: blur(12px);
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -168,7 +171,7 @@ body {
 
 #search-input:focus {
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(255, 94, 58, 0.15);
+  box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.15);
 }
 
 /* Year Filter Pills */
@@ -259,7 +262,7 @@ body {
 
 .trip-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 94, 58, 0.4);
+  border-color: rgba(var(--accent-color-rgb), 0.4);
   box-shadow: var(--shadow-lg);
 }
 
@@ -284,7 +287,7 @@ body {
 }
 
 .trip-card-year {
-  background-color: rgba(255, 94, 58, 0.15);
+  background-color: rgba(var(--accent-color-rgb), 0.15);
   color: var(--accent-color);
   font-size: 0.7rem;
   font-weight: 700;

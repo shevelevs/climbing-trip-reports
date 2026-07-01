@@ -372,7 +372,7 @@ async function loadMapAndElevation(trip) {
     // Plot Route Polyline
     const latlngs = trackData.points.map(p => [p[0], p[1]]);
     const polyline = L.polyline(latlngs, {
-      color: '#ff5e3a',
+      color: '#b75e29', // Terracotta Rust Orange for high visibility track
       weight: 4,
       opacity: 0.85
     }).addTo(mapInstance);
@@ -484,8 +484,8 @@ function drawElevationChart(trackData) {
     ctx.closePath();
     
     const grad = ctx.createLinearGradient(0, padTop, 0, padTop + chartHeight);
-    grad.addColorStop(0, 'rgba(255, 94, 58, 0.35)');
-    grad.addColorStop(1, 'rgba(255, 94, 58, 0.02)');
+    grad.addColorStop(0, 'rgba(81, 172, 240, 0.35)'); // Tahoe sky blue gradient start
+    grad.addColorStop(1, 'rgba(81, 172, 240, 0.02)');
     ctx.fillStyle = grad;
     ctx.fill();
 
@@ -495,7 +495,7 @@ function drawElevationChart(trackData) {
     data.forEach(d => {
       ctx.lineTo(getX(d.dist), getY(d.ele));
     });
-    ctx.strokeStyle = '#ff5e3a';
+    ctx.strokeStyle = '#51acf0'; // Tahoe sky blue line
     ctx.lineWidth = 2.5;
     ctx.stroke();
 
@@ -509,7 +509,7 @@ function drawElevationChart(trackData) {
       ctx.beginPath();
       ctx.moveTo(hoverX, padTop);
       ctx.lineTo(hoverX, padTop + chartHeight);
-      ctx.strokeStyle = 'rgba(255, 94, 58, 0.4)';
+      ctx.strokeStyle = 'rgba(81, 172, 240, 0.4)';
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 4]);
       ctx.stroke();
@@ -518,7 +518,7 @@ function drawElevationChart(trackData) {
       // Draw dot
       ctx.beginPath();
       ctx.arc(hoverX, hoverY, 5, 0, Math.PI * 2);
-      ctx.fillStyle = '#ff5e3a';
+      ctx.fillStyle = '#51acf0'; // Tahoe sky blue dot
       ctx.strokeStyle = '#ffffff';
       ctx.lineWidth = 2;
       ctx.fill();
@@ -565,7 +565,7 @@ function drawElevationChart(trackData) {
       if (!hoverMarker) {
         hoverMarker = L.circleMarker([point.lat, point.lon], {
           radius: 6,
-          fillColor: '#ff5e3a',
+          fillColor: '#51acf0', // sky blue marker fill
           color: '#ffffff',
           weight: 2.5,
           fillOpacity: 1
