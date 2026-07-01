@@ -291,6 +291,22 @@ async function loadClimberProfile(climberId) {
     
     bioContainer.innerHTML = htmlContent;
     
+    // Remove Mountain Project link elements from the biography DOM since we render them in the sidebar
+    bioContainer.querySelectorAll('a').forEach(a => {
+      if (a.textContent.trim().toLowerCase() === 'mountain project') {
+        const li = a.closest('li');
+        if (li) {
+          const ul = li.parentElement;
+          li.remove();
+          if (ul && ul.children.length === 0) {
+            ul.remove();
+          }
+        } else {
+          a.remove();
+        }
+      }
+    });
+    
     // Resolve relative assets
     const climberFolderUrl = `climbers/${climberId}`;
     bioContainer.querySelectorAll('img').forEach(img => {
