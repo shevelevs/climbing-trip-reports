@@ -16,7 +16,7 @@
 ## 1. Hike In & Approach to the Hulk
 <img src="./photo_2.jpg" align="right" alt="Aliona hiking with a blue backpack towards the sunlit peaks" width="400">
 
-Our journey began on August 27, 2021, with the scenic hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs loaded with climbing gear and camping supplies, we followed the trail past Barney Lake and up into the Hoover Wilderness, setting up camp in the spectacular alpine meadow directly beneath the towering east face of the Incredible Hulk. The hike in took us exactly 3 hours and 2 minutes, covering 7 miles.
+Our journey began on August 27, 2021, with the scenic hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs loaded with climbing gear and camping supplies, we followed the trail past Barney Lake and up into the Hoover Wilderness, setting up camp in the spectacular alpine meadow directly beneath the towering east face of the Incredible Hulk. The hike in took us exactly 3 hours and 2 minutes, covering about 4.4 miles.
 
 On the morning of August 28, we woke up early to crisp mountain air and clear skies. 
 
@@ -46,4 +46,4 @@ Knowing we had a long and complex descent ahead of us, we didn't linger too long
 
 <img src="./photo_31.jpg" align="left" alt="Twilight view of the Sierra framed through the descent notch" width="340" style="margin-right: 15px; margin-bottom: 10px;">
 
-We safely made it back to our camp at **8:45 PM**, completing a massive **12-hour and 46-minute** camp-to-camp day. The following day (August 29), we packed up camp and hiked the 6.94 miles back to the trailhead in a quick 2 hours and 20 minutes, tired but thrilled.
+We safely made it back to our camp at **8:45 PM**, completing a massive **12-hour and 46-minute** camp-to-camp day. The following day (August 29), we packed up camp and hiked the 4.4 miles back to the trailhead in a quick 2 hours and 20 minutes, tired but thrilled.
