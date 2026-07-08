@@ -6,8 +6,8 @@
  * **Route:** Red Dihedral (5.10b)
  * **Style:** Camp-to-Camp
  * **Total Time:** 12h 46m
+ * **Approach:** 3h 2m, 2,474ft ([Strava](https://www.strava.com/activities/5873592387))
  * [Strava (Climb)](https://www.strava.com/activities/5873602907)
- * [Strava (Hike In)](https://www.strava.com/activities/5873592387)
  * [Strava (Hike Out)](https://www.strava.com/activities/5874630969)
  * [**GPX**](./Incredible_Hulk_Red_Dihedral.gpx)
 
@@ -16,34 +16,36 @@
 ## 1. Hike In & Approach to the Hulk
 <img src="./photo_2.jpg" align="right" alt="Aliona hiking with a blue backpack towards the sunlit peaks" width="400">
 
-Our journey began on August 27, 2021, with the scenic hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs loaded with climbing gear and camping supplies, we followed the trail past Barney Lake and up into the Hoover Wilderness, setting up camp in the spectacular alpine meadow directly beneath the towering east face of the Incredible Hulk. The hike in took us exactly 3 hours and 2 minutes, covering about 4.4 miles.
+Our journey began on August 27, 2021, with the hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs, we followed the trail past Barney Lake and up into the Hoover Wilderness, setting up camp in the meadow beneath the east face of the Incredible Hulk. The hike in took 3 hours and 2 minutes, gaining 2,474 feet of elevation over about 4.4 miles.
 
-On the morning of August 28, we woke up early to crisp mountain air and clear skies. 
+On the morning of August 28, we woke up early to start the approach to the base of the route.
 
 <img src="./photo_5.jpg" align="left" alt="Incredible Hulk rising in the pre-dawn light" width="360" style="margin-right: 15px; margin-bottom: 10px;">
 
-The approach from camp to the base of the route involves scrambling up steep talus slopes and granite slabs to the start of the massive east face. The Hulk towered dramatically above us in the pre-dawn gray light. We geared up and started climbing at **8:03 AM**.
+Once we left the main trail, navigating over the large boulder field was slow and non-obvious, requiring a lot of zigzagging to find the best line. We geared up at the base of the face and started climbing at **8:03 AM**.
 
 ---
 
 ## 2. Climbing the Red Dihedral (5.10b)
 <img src="./photo_11.jpg" align="right" alt="Aliona climbing the crack below the dihedral" width="320">
 
-The Red Dihedral is a legendary classic, consisting of 12 pitches of world-class, vertical orange granite. 
+The Red Dihedral is a classic 12-pitch climb on vertical orange granite. 
 
-The first three pitches are moderate, offering fun crack and face climbing (up to 5.8) to reach the base of the main corner system. Once we entered the dihedral, the climbing became incredibly sustained and spectacular. 
+The climbing was generally pretty chill, beginning with moderate crack and face pitches to reach the corner system. Once inside the dihedral, the pitches offered sustained crack climbing and stemming. 
 
-Pitches 4 through 7 form the heart of the route. The climbing consists of beautiful stemming and finger jamming up a perfectly vertical corner crack. Pitch 5 is the crux (5.10b), requiring delicate, thin-crack laybacking and high stemming moves on pristine, golden granite. The exposure is thrilling, but the gear is excellent and the rock quality is absolutely flawless. Above the main corner, the route continues through beautiful crack systems on the upper headwall, leading us toward the summit ridge.
+The crux pitch (Pitch 5, 5.10b) was the main exception to the chill climbing, requiring sustained laybacking and stemming with a committing move at the end of the pitch. Above the main corner, the route continues through crack systems on the upper headwall. Near the top of the route, we passed through the "keyhole" feature. Sergey was a bit worried about squeezing through the keyhole, but it turned out not to be that small and went fine.
 
 ---
 
-## 3. Summit & Tedious Descent
+## 3. Summit & Descent
 <img src="./photo_27.jpg" align="right" alt="Aliona signing the orange summit register" width="300">
 
-We topped out on the summit of the Incredible Hulk at **6:00 PM** just as the warm evening light began bathing the Sierra peaks. The summit views looking down at Barney Lake and the surrounding wilderness are breathtaking. We sat on the warm rock, and Aliona signed the orange summit register.
+We topped out on the summit of the Incredible Hulk at **6:00 PM**. The summit views looking down at Barney Lake and the surrounding wilderness were clear, and Aliona signed the orange summit register.
 
-Knowing we had a long and complex descent ahead of us, we didn't linger too long. The descent from the Hulk is notoriously tedious and tricky, requiring route-finding through the notch, multiple rappels, downclimbing steep rock steps, and navigating loose talus. 
+When we reached the top, I thought we were doing pretty well on time and briefly considered packing up camp to hike all the way out to the trailhead that evening instead of camping another night. 
 
 <img src="./photo_31.jpg" align="left" alt="Twilight view of the Sierra framed through the descent notch" width="340" style="margin-right: 15px; margin-bottom: 10px;">
 
-We safely made it back to our camp at **8:45 PM**, completing a massive **12-hour and 46-minute** camp-to-camp day. The following day (August 29), we packed up camp and hiked the 4.4 miles back to the trailhead in a quick 2 hours and 20 minutes, tired but thrilled.
+However, the descent took much longer than expected. Finding the way through the notch, negotiating the rappels, downclimbing, and scrambling back through the boulder field took us **2 hours and 45 minutes**. We didn't make it back to camp until **8:45 PM**, completing a **12-hour and 46-minute** camp-to-camp day, so we spent another night.
+
+The following morning (August 29), we packed up camp and hiked the 4.4 miles back to the trailhead in 2 hours and 20 minutes.
