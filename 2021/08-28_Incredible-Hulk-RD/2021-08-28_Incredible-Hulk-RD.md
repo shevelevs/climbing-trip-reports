@@ -16,13 +16,13 @@
 ## 1. Hike In & Approach to the Hulk
 <img src="./photo_2.jpg" align="right" alt="Aliona hiking with a blue backpack towards the sunlit peaks" width="400">
 
-Our journey began on August 27, 2021, with the hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs, we followed the trail past Barney Lake and up into the Hoover Wilderness, setting up camp in the meadow beneath the east face of the Incredible Hulk. The hike in took 3 hours and 2 minutes, gaining 2,474 feet of elevation over about 4.4 miles.
+Our journey began on August 27, 2021, with the hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs, we followed the trail past Barney Lake and up into the Hoover Wilderness. Once we left the good trail, navigating over the large boulder field was slow and non-obvious, requiring a lot of zigzagging to find the best line to set up camp in the meadow beneath the east face of the Incredible Hulk. The hike in took 3 hours and 2 minutes, gaining 2,474 feet of elevation over about 4.4 miles.
 
 On the morning of August 28, we woke up early to start the approach to the base of the route.
 
 <img src="./photo_5.jpg" align="left" alt="Incredible Hulk rising in the pre-dawn light" width="360" style="margin-right: 15px; margin-bottom: 10px;">
 
-Once we left the main trail, navigating over the large boulder field was slow and non-obvious, requiring a lot of zigzagging to find the best line. We geared up at the base of the face and started climbing at **8:03 AM**.
+The approach from camp to the base of the route involves scrambling up steep talus slopes and granite slabs to the start of the massive east face. We geared up at the base of the face and started climbing at **8:03 AM**.
 
 ---
 
