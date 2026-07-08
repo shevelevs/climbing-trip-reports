@@ -16,20 +16,18 @@
 ## 1. Hike In & Approach to the Hulk
 <img src="./photo_2.jpg" align="right" alt="Aliona hiking with a blue backpack towards the sunlit peaks" width="400">
 
-Our journey began on August 27, 2021, with the hike in from the Twin Lakes trailhead near Bridgeport. Carrying heavy packs, we followed the trail past Barney Lake and up into the Hoover Wilderness. Once we left the good trail, navigating over the large boulder field was slow and non-obvious, requiring a lot of zigzagging to find the best line to set up camp in the meadow beneath the east face of the Incredible Hulk. The hike in took 3 hours and 2 minutes, gaining 2,474 feet of elevation over about 4.4 miles.
+We began hiking the day before from the Twin Lakes trailhead near Bridgeport. Once we left the good trail, navigating over the large boulder field became a bit slower and non-obvious. The hike in took ~3 hours, gaining ~2,500 feet of elevation over about 4.4 miles.
 
-On the morning of August 28, we woke up early to start the approach to the base of the route.
+Next morning we woke up early to start the approach to the base of the route.
 
 <img src="./photo_5.jpg" align="left" alt="Incredible Hulk rising in the pre-dawn light" width="360" style="margin-right: 15px; margin-bottom: 10px;">
 
-The approach from camp to the base of the route involves scrambling up steep talus slopes and granite slabs to the start of the massive east face. We geared up at the base of the face and started climbing at **8:03 AM**.
+We geared up at the base of the face and started climbing at **8AM**.
 
 ---
 
 ## 2. Climbing the Red Dihedral (5.10b)
 <img src="./photo_11.jpg" align="right" alt="Aliona climbing the crack below the dihedral" width="320">
-
-The Red Dihedral is a classic 12-pitch climb on vertical orange granite. 
 
 The climbing was generally pretty chill, beginning with moderate crack and face pitches to reach the corner system. Once inside the dihedral, the pitches offered sustained crack climbing and stemming. 
 
@@ -48,4 +46,4 @@ When we reached the top, I thought we were doing pretty well on time and briefly
 
 However, the descent took much longer than expected. Finding the way through the notch, negotiating the rappels, downclimbing, and scrambling back through the boulder field took us **2 hours and 45 minutes**. We didn't make it back to camp until **8:45 PM**, completing a **12-hour and 46-minute** camp-to-camp day, so we spent another night.
 
-The following morning (August 29), we packed up camp and hiked the 4.4 miles back to the trailhead in 2 hours and 20 minutes.
+The following morningnpm , we packed up camp and hiked the 4.4 miles back to the trailhead in 2 hours and 20 minutes.
