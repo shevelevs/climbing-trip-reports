@@ -46,4 +46,4 @@ When we reached the top, I thought we were doing pretty well on time and briefly
 
 However, the descent took much longer than expected. Finding the way through the notch, negotiating the rappels, downclimbing, and scrambling back through the boulder field took us **2 hours and 45 minutes**. We didn't make it back to camp until **8:45 PM**, completing a **12-hour and 46-minute** camp-to-camp day, so we spent another night.
 
-The following morningnpm , we packed up camp and hiked the 4.4 miles back to the trailhead in 2 hours and 20 minutes.
+The following morning, we packed up camp and hiked the 4.4 miles back to the trailhead in 2 hours and 20 minutes.
