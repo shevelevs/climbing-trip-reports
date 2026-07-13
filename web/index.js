@@ -711,6 +711,56 @@ async function loadMapAndElevation(trip) {
       opacity: 0.9
     }).addTo(mapInstance);
 
+    // Add Start and Finish markers
+    if (latlngs.length > 0) {
+      const startPoint = latlngs[0];
+      const endPoint = latlngs[latlngs.length - 1];
+
+      const startEleVal = trackData.points[0][2];
+      const endEleVal = trackData.points[trackData.points.length - 1][2];
+
+      const startTooltip = startEleVal 
+        ? `Start (${Math.round(startEleVal * 3.28084).toLocaleString()} ft)` 
+        : 'Start';
+      const endTooltip = endEleVal 
+        ? `Finish (${Math.round(endEleVal * 3.28084).toLocaleString()} ft)` 
+        : 'Finish';
+
+      // Start Marker (S)
+      const startIcon = L.divIcon({
+        className: 'map-marker-start',
+        html: '<div class="map-marker-inner">S</div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12]
+      });
+      L.marker(startPoint, { 
+        icon: startIcon,
+        zIndexOffset: 1000
+      })
+      .addTo(mapInstance)
+      .bindTooltip(startTooltip, { 
+        direction: 'top', 
+        offset: [0, -10]
+      });
+
+      // Finish Marker (F)
+      const endIcon = L.divIcon({
+        className: 'map-marker-end',
+        html: '<div class="map-marker-inner">F</div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12]
+      });
+      L.marker(endPoint, { 
+        icon: endIcon,
+        zIndexOffset: 999
+      })
+      .addTo(mapInstance)
+      .bindTooltip(endTooltip, { 
+        direction: 'top', 
+        offset: [0, -10]
+      });
+    }
+
     mapInstance.fitBounds(trackData.bounds, { padding: [20, 20] });
     
     // 2. Draw Elevation Profile Canvas Chart
