@@ -40,7 +40,7 @@ Lower down, two pitches above the deck, we met Polish climber Stan and his partn
 We originally thought we might need a second bivy night, but with plenty of daylight remaining, we packed up our cave camp and began the hike out. We completed the return hike in **2 hours and 13 minutes**. Driving into Bridgeport around 9:00 PM, we were thrilled to find **Rhino's Bar & Grill** open and buzzing with live energy, pool games, and a full kitchen. We celebrated a successful trip with burgers and beers before heading home. I pulled into South Lake Tahoe just before midnight. Huge credit to Peter for being a fantastic partner on his first big Sierra alpine wall with me!
 
 > **Takeaways for future parties:**
-> * **Pitch Linking:** Linking the main crux pitch (P6–7) creates severe rope drag over the mid-pitch bulge; consider splitting it at the ledge below the 5.11a finish.
+> * **Pitch Strategy:** The main crux pitch (P6 in Supertopo) is long and continuous—the mid-pitch bulge creates severe rope drag near the top; consider splitting it into two pitches at the small ledge below the 5.11a finish.
 > * **Rack Management:** Save double hand-size pieces (.75–#2) for the final pitch so you don't run out after building a gear belay.
 > * **Bivy Cave:** If available, the cave at the base of the Hulk offers premium, wind-protected flat bivy spots for two.
 > * **Post-Climb Food:** Rhino's in Bridgeport keeps its kitchen open late and makes for the perfect post-Hulk celebration spot!
